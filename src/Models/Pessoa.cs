@@ -9,12 +9,14 @@ public class Pessoa
         Nome = nome;
     }
 
-    public Pessoa(string nome, string sobrenome)
+    public Pessoa(string nome, string sobrenome, CPF cpf)
     {
         Nome = nome;
         Sobrenome = sobrenome;
+        CpfPessoa = cpf;
     }
-
+    private readonly CPF CpfPessoa;
+    public CPF Cpf { get => CpfPessoa; }
     public string Nome { get; set; }
     public string Sobrenome { get; set; }
     public string NomeCompleto => $"{Nome} {Sobrenome}".ToUpper();
